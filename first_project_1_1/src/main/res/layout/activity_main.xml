@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTintMode="multiply"
+    android:foregroundTint="#182878"
+    android:foregroundTintMode="multiply"
+    android:onClick="Click"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonConfirmSetNewHumidityLevel"
+        android:layout_width="320dp"
+        android:layout_height="83dp"
+        android:fontFamily="arial"
+        android:onClick="sendHumidityParametersToDevice"
+        android:text="@string/stringTextOnConfirmButton"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:backgroundTint="#46061A50"
+        app:layout_constraintBottom_toTopOf="@+id/textSetHumidityLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPrintCurrentHumidityLevel" />
+
+    <ProgressBar
+        android:id="@+id/progressBarWait2"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarSetHumidityLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBarSetHumidityLevel" />
+
+    <SeekBar
+        android:id="@+id/seekBarSetHumidityLevel"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
+        android:layout_width="409dp"
+        android:layout_height="85dp"
+        android:backgroundTint="#CDDC39"
+        android:foregroundTint="#CDDC39"
+        android:max="100"
+        android:min="1"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:progressBackgroundTint="#3F51B5"
+        android:progressTint="#3F51B5"
+        android:rotation="0"
+        app:layout_constraintBottom_toTopOf="@+id/Divider1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textSetHumidityLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textPrintCurrentHumidityLevel"
+        app:layout_constraintVertical_bias="0.863" />
+
+    <TextView
+        android:id="@+id/textSetHumidityLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contextClickable="false"
+        android:onClick="Click"
+        android:text="@string/stringSetHumidityLevel"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarWait2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textPrintCurrentLightingLevel"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stringCurrentLightingLevel"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Divider1" />
+
+    <TextView
+        android:id="@+id/textPrintCurrentHumidityLevel"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stringCurrentHumidityLevel"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSetLightingLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stringSetLightingLevel"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarSetLightingLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <SeekBar
+        android:id="@+id/seekBarSetLightingLevel"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
+        android:layout_width="409dp"
+        android:layout_height="85dp"
+        android:backgroundTint="#CDDC39"
+        android:foregroundTint="#CDDC39"
+        android:max="100"
+        android:min="1"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:progressBackgroundTint="#3F51B5"
+        android:progressTint="#3F51B5"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
+
+    <View
+        android:id="@+id/Divider1"
+        android:layout_width="400dp"
+        android:layout_height="5dp"
+        android:background="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonConfirmSetNewLightingLevel"
+        android:layout_width="320dp"
+        android:layout_height="83dp"
+        android:fontFamily="arial"
+        android:onClick="sendLightingParametersToDevice"
+        android:text="@string/stringTextOnConfirmButton"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:backgroundTint="#46061A50"
+        app:layout_constraintBottom_toTopOf="@+id/textSetLightingLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPrintCurrentLightingLevel" />
+
+    <ProgressBar
+        android:id="@+id/progressBarWait1"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarSetLightingLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSetLightingLevel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

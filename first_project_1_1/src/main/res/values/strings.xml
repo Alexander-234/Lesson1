@@ -1,0 +1,13 @@
+<resources>
+    <string name="stringNameOfFirstWindow">Программирование компараторов</string>
+    <string name="stringNameOfSecondWindow">Непрерывное измерение...</string>
+
+    <string name="stringSetLightingLevel">УСТАНОВКА НОВОГО ПОРОГА ОСВЕЩЁННОСТИ:</string>
+    <string name="stringCurrentLightingLevel">ТЕКУЩИЙ ПОРОГ ОСВЕЩЁННОСТИ:</string>
+
+    <string name="stringTextOnConfirmButton">ЗАПИСАТЬ</string>
+    <string name="stringAfterClick">ОТПРАВКА...</string>
+
+    <string name="stringSetHumidityLevel">УСТАНОВКА НОВОГО ПОРОГА ВЛАЖНОСТИ:</string>
+    <string name="stringCurrentHumidityLevel">ТЕКУЩИЙ ПОРОГ ВЛАЖНОСТИ:</string>
+</resources>
